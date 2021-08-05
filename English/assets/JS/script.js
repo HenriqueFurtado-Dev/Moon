@@ -1,30 +1,6 @@
 
-//Configs PreLoader
-var loader;
 
-function loadNow(opacity) {
-    if (opacity <= 0) {
-        displayContent();
-    } else {
-        loader.style.opacity = opacity;
-        window.setTimeout(function() {
-            loadNow(opacity - 0.05);
-        }, 50);
-    }
-}
-
-function displayContent() {
-    loader.style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    loader = document.getElementById('loader');
-    loadNow(3);
-});
       
-
-//Parallax Display
 
 let stars = document.getElementById('stars')
 let moon = document.getElementById('moon')
@@ -43,11 +19,3 @@ window.addEventListener('scroll', function(){
     text.style.marginTop = value * 1.5 + 'px';
     btn.style.marginTop = value * 1.5 + 'px';
 })
-
-
-/*
-
-Menu Mobile
-
-*/ 
-
